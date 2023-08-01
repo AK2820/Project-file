@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            LogIn Page
+        </title>
+        <link rel="icon" type="image/x-icon" href="Techvision_Logo.png">
+
+        <style>
+           
+
+            form{
+                fill: antiquewhite;
+                margin-top: 15%;
+                margin-left: 70%;
+                font-size: 1.05em;
+            }
+            #uid{
+                font:100;
+            }
+            #le{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 20px;
+                border: 4px;
+            }
+            body {
+                background-image: url('Finger.jpeg');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                color:white;
+            }
+            fieldset {
+                width:fit-content;
+                height: auto;
+                display: block;
+                margin-left: 2px;
+                margin-right: 2px;
+                padding-top: 0.35em;
+                padding-bottom: 0.625em;
+                padding-left: 0.75em;
+                padding-right: 0.75em;
+                border: 2px groove (internal value);
+            }
+
+            table{
+                padding: 0%;
+            }
+            legend{
+                font-size: 2em;
+            }
+            #Role{
+                width: 100%;
+            }
+            #lab{
+                
+            }
+        </style>
+    </head>
+    <body>
+        <br>
+        <br>
+        <br>
+        <form action=" post">
+        <fieldset>
+            <legend>LogIn Form</legend>
+        <table>
+            <tr>
+                <td id="lab"> <label for="role"> Role: </label></td>
+                <td>
+                   
+                    <select id="Role">
+                       <option>Admin</option>
+                       <option>First User</option>
+                       <option>Last User</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td id="lab"><label for="Uid">User Id:</label></td>
+                <td><input type="text" id="uid" name="UserId" placeholder="User Name"></td>
+            </tr>
+            <tr>
+                <td id="lab"><label for="Pass">Password:</label></td>
+                <td><input type="password" id="pass" name="Password" placeholder="Password"></td>
+            </tr>
+            <tr>
+                <td><br><br>
+     
+                    <input type="submit" value="Submit"><br><br></td>
+                <td><br><br>
+     
+                    <input type="reset" value="Clear"><br><br></td>
+            </tr>
+        </table>
+        
+    </fieldset>
+   </form>
+
+    </body>
+</html>
