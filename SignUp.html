@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SignUp Page</title>
+    <link rel="icon" type="image/x-icon" href="Techvision_Logo.png">
+    <style>
+           
+
+        form{
+            fill: antiquewhite;
+            margin-top: 15%;
+            margin-left: 70%;
+            font-size: 1.05em;
+        }
+        #uid{
+            font:100;
+        }
+        #le{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            border: 4px;
+        }
+        body {
+            background-image: url('Finger.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color:white;
+        }
+        fieldset {
+            width:fit-content;
+            height: auto;
+            display: block;
+            margin-left: 2px;
+            margin-right: 2px;
+            padding-top: 0.35em;
+            padding-bottom: 0.625em;
+            padding-left: 0.75em;
+            padding-right: 0.75em;
+            border: 2px groove (internal value);
+        }
+
+        table{
+            padding: 0%;
+        }
+        legend{
+            font-size: 2em;
+        }
+        #Role{
+            width: 100%;
+        }
+        #sub{
+                margin-left: 40%;
+            }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>SignIn Form</legend>
+        <table>
+            <tr>
+                <td id="lab"> <label for="role"> Role: </label></td>
+                <td>
+                   
+                    <select id="Role">
+                       <option>Admin</option>
+                       <option>First User</option>
+                       <option>Last User</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td id="lab"><label for="Uid">First Name:</label></td>
+                <td><input type="text" id="uid" name="UserId" placeholder="User Name"></td>
+            </tr>
+            <tr>
+                <td id="lab"><label for="Uid">Last Name:</label></td>
+                <td><input type="text" id="uid" name="UserId" placeholder="User Name"></td>
+            </tr>
+            <tr>
+                <td id="lab"><label for="Uid">E-mail Id:</label></td>
+                <td><input type="email" id="uid" name="UserId" placeholder="User Name"></td>
+            </tr>
+            <tr>
+                <td id="lab"><label for="Uid">Contact No:</label></td>
+                <td><input type="text" name="country_code" title="Error Message" placeholder="Mobile Number" pattern="[1-9]{1}[0-9]{9}"></td>
+            </tr>
+            <tr>
+                <td id="lab"><label for="Uid">User Id:</label></td>
+                <td><input type="text" id="uid" name="UserId" placeholder="User Name"></td>
+            </tr>
+            <tr>
+                <td id="lab"><label for="Password">Password:</label></td>
+                <td><input type="password" id="Password" placeholder="Password" required></td>
+            </tr>
+            <tr>
+                <td id="lab"><label for="confirm_password">Confirm Password:</label></td>
+                <td> <input type="password" id="confirm_password" placeholder="Confirm Password" required></td>
+            </tr>
+            <tr>
+                <td><br><br>
+     
+                    <button type="submit" id="sub">Submit</button><br><br></td>
+                <td><br><br>
+     
+                    <input type="reset" value="Clear"><br><br></td> 
+            </tr>
+        </table>
+        
+    </fieldset>
+        <!-- <label for="Password">Password:</label>
+        <input type="password" id="Password" placeholder="Password" required>
+        <br>
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+        <br> -->
+        <!-- <button type="submit">Submit</button> -->
+    </form>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission for this example
+
+            var password = document.getElementById('Password').value;
+            var confirmPassword = document.getElementById('confirm_password').value;
+
+            if (password !== confirmPassword) {
+                alert('Password does not match, please try again.');
+            } else {
+                alert('Password is valid. Form can be submitted.');
+                // Uncomment the following line to allow form submission
+                // event.target.submit();
+            }
+        });
+    </script>
+</body>
+</html>
